@@ -1,2 +1,2 @@
 # 100-p-days
-Abc
+100 days of Python course solutions
