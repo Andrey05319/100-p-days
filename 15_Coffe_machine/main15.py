@@ -143,9 +143,9 @@ make_coffee(money, resources)
 # 5. Process coins.
 # a. If there are sufficient resources to make the drink selected, then the program should
 # prompt the user to insert coins.
-# b. Remember that quarters = $0.25, dimes = $0.10, nickles = $0.05, pennies = $0.01
+# b. Remember that quarters = $0.25, dimes = $0.10, nickles = $0.05_Loops, pennies = $0.01
 # c. Calculate the monetary value of the coins inserted. E.g. 1 quarter, 2 dimes, 1 nickel, 2
-# pennies = 0.25 + 0.1 x 2 + 0.05 + 0.01 x 2 = $0.52
+# pennies = 0.25 + 0.1 x 2 + 0.05_Loops + 0.01 x 2 = $0.52
 
 # TODO 6
 # 6. Check transaction successful?
@@ -231,7 +231,7 @@ make_coffee(money, resources)
 #     print("Please insert coins.")
 #     total = int(input("how many quarters?: ")) * 0.25
 #     total += int(input("how many dimes?: ")) * 0.1
-#     total += int(input("how many nickles?: ")) * 0.05
+#     total += int(input("how many nickles?: ")) * 0.05_Loops
 #     total += int(input("how many pennies?: ")) * 0.01
 #     return total
 #
