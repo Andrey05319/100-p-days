@@ -1,5 +1,6 @@
 from turtle import Screen
 from paddle import Paddle
+from ball import Ball
 
 screen = Screen()
 screen.setup(width=800, height=600)
@@ -9,6 +10,7 @@ screen.tracer(0)  # Turning off the animation of moving
 
 r_paddle = Paddle((350, 0))
 l_paddle = Paddle((-350, 0))
+ball = Ball()
 
 screen.listen()
 screen.onkey(r_paddle.up, "Up")
@@ -18,6 +20,7 @@ screen.onkey(l_paddle.down, "a")
 
 game_is_on = True
 while game_is_on:
+    ball.move()
     screen.update()  # Works in pair with screen.tracer(0) - updating the screen in absence of animation
 
 screen.exitonclick()
