@@ -22,10 +22,3 @@ class Paddle(Turtle):
         if self.ycor() > -230:
             self.goto(self.xcor(), self.ycor() - 20)
 
-    # screen.onkey(paddle.up, "Up")
-    # screen.onkey(paddle.down, "Down")
-
-    # width = 20
-    # height = 100
-    # x_pos = 350
-    # y_pos = 0
