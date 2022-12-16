@@ -1,8 +1,6 @@
 from turtle import Turtle
 
-
 STARTING_COORDINATES = (0, 0)
-
 
 
 class Ball(Turtle):
@@ -17,7 +15,6 @@ class Ball(Turtle):
         self.increment_x = 10
         self.increment_y = 10
 
-
     def move(self):
         new_x = self.xcor() + self.increment_x
         new_y = self.ycor() + self.increment_y
@@ -27,6 +24,8 @@ class Ball(Turtle):
         #     new_y = self.ycor() + increment_y
         self.goto(new_x, new_y)
 
-
-    def bounce(self):
+    def bounce_y(self):
         self.increment_y *= -1
+
+    def bounce_x(self):
+        self.increment_x *= -1
