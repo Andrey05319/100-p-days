@@ -25,4 +25,8 @@ while game_is_on:
     ball.move()
     screen.update()  # Works in pair with screen.tracer(0) - updating the screen in absence of animation
 
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        ball.bounce()
+
+
 screen.exitonclick()
