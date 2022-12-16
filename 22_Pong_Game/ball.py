@@ -1,5 +1,5 @@
 from turtle import Turtle
-import time
+
 
 STARTING_COORDINATES = (0, 0)
 increment_x = 10
@@ -25,5 +25,5 @@ class Ball(Turtle):
             new_y = self.ycor() + increment_y
 
 
-        time.sleep(0.1)
+
         self.goto(new_x, new_y)
