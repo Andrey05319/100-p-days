@@ -9,14 +9,23 @@ class Paddle(Turtle):
         super().__init__()
         self.shape("square")
         self.penup()
-        self.shapesize(stretch_len=5, stretch_wid=1)
+        self.shapesize(stretch_len=1, stretch_wid=5)
+        self.color("white")
+        self.speed("fastest")
+        self.goto(STARTING_COORDINATES)
 
+    def up(self):
+        if self.ycor() < 250:
+            self.goto(self.xcor(), self.ycor() + 20)
 
+    def down(self):
+        if self.ycor() > -230:
+            self.goto(self.xcor(), self.ycor() - 20)
 
-
+    # screen.onkey(paddle.up, "Up")
+    # screen.onkey(paddle.down, "Down")
 
     # width = 20
     # height = 100
     # x_pos = 350
     # y_pos = 0
-
