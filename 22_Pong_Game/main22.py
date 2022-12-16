@@ -9,10 +9,7 @@ screen.tracer(0)
 
 
 
-# width = 20
-# height = 100
-# x_pos = 350
-# y_pos = 0
+
 
 
 
