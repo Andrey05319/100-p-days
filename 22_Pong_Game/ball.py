@@ -29,3 +29,11 @@ class Ball(Turtle):
 
     def bounce_x(self):
         self.increment_x *= -1
+
+    def refresh_ball(self):
+        # if self.xcor() > 0:
+        #     self.increment_x = ((self.increment_x ** 2) ** (1/2)) * -1
+        # else:
+        #     self.increment_x = ((self.increment_x ** 2) ** (1 / 2))
+        self.goto(STARTING_COORDINATES)
+        self.bounce_x()
