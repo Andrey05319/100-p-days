@@ -23,7 +23,7 @@ screen.onkey(l_paddle.down, "a")
 
 game_is_on = True
 while game_is_on:
-    time.sleep(0.1)
+    time.sleep(ball.move_speed)
     ball.move()
     screen.update()  # Works in pair with screen.tracer(0) - updating the screen in absence of animation
 
@@ -44,8 +44,5 @@ while game_is_on:
     if ball.xcor() < -400:
         ball.refresh_ball()
         score.r_point()
-
-
-
 
 screen.exitonclick()

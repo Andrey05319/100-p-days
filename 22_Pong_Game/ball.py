@@ -14,6 +14,7 @@ class Ball(Turtle):
         self.goto(STARTING_COORDINATES)
         self.increment_x = 10
         self.increment_y = 10
+        self.move_speed = 0.1
 
     def move(self):
         new_x = self.xcor() + self.increment_x
@@ -27,8 +28,10 @@ class Ball(Turtle):
     def bounce_y(self):
         self.increment_y *= -1
 
+
     def bounce_x(self):
         self.increment_x *= -1
+        self.move_speed *= 0.9
 
     def refresh_ball(self):
         # if self.xcor() > 0:
@@ -37,3 +40,4 @@ class Ball(Turtle):
         #     self.increment_x = ((self.increment_x ** 2) ** (1 / 2))
         self.goto(STARTING_COORDINATES)
         self.bounce_x()
+        self.move_speed = 0.1
