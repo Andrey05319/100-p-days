@@ -14,7 +14,7 @@ class Ball(Turtle):
         self.goto(STARTING_COORDINATES)
         self.increment_x = 10
         self.increment_y = 10
-        self.move_speed = 0.1
+        self.move_speed = 0.2
 
     def move(self):
         new_x = self.xcor() + self.increment_x
