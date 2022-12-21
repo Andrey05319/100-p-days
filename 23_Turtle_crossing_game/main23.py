@@ -12,18 +12,20 @@ player = Player()
 screen.listen()
 screen.onkey(player.move, "Up")
 
+counter = 1
 game_is_on = True
 cars = []
+
 while game_is_on:
-    cars.append(CarManager())
+    counter += 1
+    if counter == 10:
+        cars.append(CarManager())
+        counter = 1
     for car in cars:
         car.car_move()
 
-
     time.sleep(0.1)
     screen.update()
-
-
 
 # 1. A turtle moves forwards when you press the "Up" key.
 # It can only move forwards, not back, left or right.
