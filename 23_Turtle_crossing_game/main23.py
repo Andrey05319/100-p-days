@@ -18,9 +18,12 @@ cars = []
 
 while game_is_on:
     counter += 1
+
     if counter == 10:
         cars.append(CarManager())
         counter = 1
+
+
     for car in cars:
         car.car_move()
 
