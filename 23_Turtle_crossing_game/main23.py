@@ -8,6 +8,7 @@ screen = Screen()
 screen.setup(width=600, height=600)
 screen.tracer(0)
 player = Player()
+score = Scoreboard()
 
 screen.listen()
 screen.onkey(player.move, "Up")
@@ -31,6 +32,7 @@ while game_is_on:
 
     if player.ycor() > 250:
         player.next_level()
+        score.update_scoreboard()
 
     time.sleep(player.delay)
     screen.update()
