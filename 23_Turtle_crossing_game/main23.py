@@ -19,16 +19,26 @@ cars = []
 while game_is_on:
     counter += 1
 
-    if counter == 10:
+    if counter == 5:
         cars.append(CarManager())
         counter = 1
 
 
     for car in cars:
+        if player.distance(car) < 20:
+            print("Game Over")
+            game_is_on = False
         car.car_move()
 
-    time.sleep(0.1)
+    if player.ycor() >250:
+        player.next_level()
+
+
+
+    time.sleep(player.delay)
     screen.update()
+
+screen.exitonclick()
 
 # 1. A turtle moves forwards when you press the "Up" key.
 # It can only move forwards, not back, left or right.

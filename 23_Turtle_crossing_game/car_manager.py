@@ -20,3 +20,5 @@ class CarManager(Turtle):
         self.goto(self.xcor()-MOVE_INCREMENT, self.ycor())
 
 
+
+
